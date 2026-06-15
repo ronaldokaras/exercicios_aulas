@@ -1,0 +1,31 @@
+meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'agost', 'set', 'out', 'nov', 'dez']
+vendas1 = [1000,1500,350,2700,900,701]
+vendas2 = [19850, 20120,17540,15555,49051,9650]
+
+vendas_ano = vendas1 + vendas2
+
+max_vendido = max(vendas_ano)
+min_vendido = min(vendas_ano)
+
+index_maior = vendas_ano.index(max_vendido)
+index_menor = vendas_ano.index(min_vendido)
+
+melhor_mes = meses[index_maior]
+pior_mes = meses[index_menor]
+
+print(f'O melhor vendido {melhor_mes} com R$ {max_vendido}')
+print(f'O menor vendido {pior_mes} com R$ {min_vendido}')
+print(f"Faturamento total R$ {sum(vendas_ano)}")
+print(f"O melhor mês R$ {max_vendido}")
+print(f"O pior mês R$ {min_vendido}")
+
+# Porcentual de representação do melhor mês (corrigido)
+porcentual = (max_vendido / sum(vendas_ano)) * 100
+
+print(f"Porcentual de representação do melhor mês: {porcentual:.2f}%")
+
+pares = list(zip(meses, vendas_ano))
+top3 = sorted(pares, key=lambda x: x[1], reverse=True)[:3]
+
+for i, (mes, venda) in enumerate(top3, 1):
+    print(f"{i}º lugar: {mes} - R$ {venda}")
