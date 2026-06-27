@@ -1,12 +1,12 @@
 
 cardapio = {
-    100: ("Cachorro-Quente", 1.20),
-    101: ("Bauru Simples", 1.30),
-    102: ("Bauru com ovo", 1.50),
-    103: ("Hambúrguer", 1.20),
-    104: ("Cheeseburguer", 1.30),
-    105: ("Refrigerante", 1.00)
-}
+    1: ("Cachorro-Quente", 5.50),
+    2: ("Bauru Simples", 1.00),
+    3: ("Bauru com ovo", 2.00),
+    4: ("Hambúrguer", 3.50),
+    5: ("Cheeseburguer", 2.50),
+    6: ("Refrigerante", 2.00)
+    }   
 
 total_geral = 0.0
 
